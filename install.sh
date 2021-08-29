@@ -2,16 +2,16 @@
 # 
 # to install, clone repo and run this installer
 # or
-# zsh <(curl -s https://raw.githubusercontent.com/batlogic/shells/main/install_zsh.sh)
+# zsh <(curl -s https://raw.githubusercontent.com/m-mattsson/zsh-profile/main/install.sh)
 
-#source (curl -s https://raw.githubusercontent.com/batlogic/shells/main/zsh/scripts/revolver)
+#source (curl -s https://raw.githubusercontent.com/m-mattsson/zsh-profile/main/zsh/scripts/revolver)
 
 USERPATH=$PATH
 USER_SHELL_DIR="$HOME/.config/shells"
 export ZDOTDIR="$HOME/.config/shells/zsh"
 USER_ZSH_DIR="$USER_SHELL_DIR/zsh"
 USER_PLUGIN_DIR="$USER_ZSH_DIR/plugins"
-REPO_SOURCE="https://github.com/batlogic/shells.git"
+REPO_SOURCE="https://github.com/m-mattsson/zsh-profile.git"
 OPSYS="UNKNOWN"
 FORCE_ZSH_INSTALL=false
 
