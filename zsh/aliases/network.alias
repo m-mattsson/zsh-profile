@@ -1,0 +1,5 @@
+alias myip="curl http://ipecho.net/plain; echo"
+alias pg="echo 'Pinging Google' && ping www.google.com";
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+alias gds-start='sudo systemctl start openvpn-client@gds'
+alias gds-stop='sudo systemctl stop openvpn-client@gds'

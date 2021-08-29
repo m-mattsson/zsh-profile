@@ -1,0 +1,45 @@
+{
+  "homebrew_version": "3.1.12-114-gf716af4",
+  "used_options": [
+
+  ],
+  "unused_options": [
+
+  ],
+  "built_as_bottle": true,
+  "poured_from_bottle": true,
+  "installed_as_dependency": false,
+  "installed_on_request": true,
+  "changed_files": [
+
+  ],
+  "time": 1629811811,
+  "source_modified_time": 1624142625,
+  "compiler": "clang",
+  "aliases": [
+
+  ],
+  "runtime_dependencies": [
+
+  ],
+  "source": {
+    "spec": "stable",
+    "versions": {
+      "stable": "24",
+      "head": null,
+      "version_scheme": 0
+    },
+    "path": "/opt/homebrew/Library/Taps/homebrew/homebrew-core/Formula/lf.rb",
+    "tap_git_head": "bfe7576c162718fa4cb69e39be7648db056ad58e",
+    "tap": "homebrew/core"
+  },
+  "arch": "arm64",
+  "built_on": {
+    "os": "Macintosh",
+    "os_version": "macOS 11",
+    "cpu_family": "arm_firestorm_icestorm",
+    "xcode": "12.5",
+    "clt": "12.5.0.22.9",
+    "preferred_perl": "5.30"
+  }
+}

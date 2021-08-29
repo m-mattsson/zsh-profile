@@ -1,0 +1,51 @@
+
+#
+# # ex - archive extractor
+# # usage: extract <file>
+extract ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+alias update-shell="sh <(curl -s https://raw.githubusercontent.com/batlogic/shells/main/install_zsh.sh)"
+
+alias pacman-update='sudo pacman-mirrors --geoip'
+
+# Command line head / tail shortcuts
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
+alias -g L="| less"
+alias -g M="| most"
+alias -g LL="2>&1 | less"
+alias -g CA="2>&1 | cat -A"
+alias -g NE="2> /dev/null"
+alias -g NUL="> /dev/null 2>&1"
+alias -g P="2>&1| pygmentize -l pytb"
+alias -s log='tail -n10'
+alias t='tail -f'
+
+alias topten="history | commands | sort -rn | head"
+
+
+
+
+

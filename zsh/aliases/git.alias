@@ -1,0 +1,55 @@
+## custom functions
+gpr() {
+  if [ $? -eq 0 ]; then
+    github_url=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@' -e 's%\.git$%%'`;
+    branch_name=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`;
+    pr_url=$github_url"/compare/master..."$branch_name
+    open $pr_url;
+  else
+    echo 'failed to open a pull request.';
+  fi
+}
+
+gitpush() {
+    git add .
+    git commit -m "$*"
+    git pull
+    git push
+}
+gitupdate() {
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/github
+    ssh -T git@github.com
+}
+
+function gc { 
+    git commit -m "$@"; 
+}
+
+# git aliases
+alias gcm="git checkout master";
+alias gs="git status";
+alias gpull="git pull";
+alias gf="git fetch";
+alias gfa="git fetch --all";
+alias gf="git fetch origin";
+alias gpush="git push";
+alias gd="git diff";
+alias ga="git add .";
+alias gb="git branch";
+alias gbr="git branch remote"
+alias gfr="git remote update"
+alias gbn="git checkout -B "
+alias grf="git reflog";
+alias grh="git reset HEAD~" # last commit
+alias gac="git add . && git commit -a -m "
+alias gsu="git gpush --set-upstream origin "
+alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+
+## checkout a new remote branch (exists remote, not locally)
+## git checkout -b LocalName origin/remotebranchname (checkout a remote branch)
+
+
+alias clone='git clone --recurse-submodules -j8'
+alias gp=gitpush
+alias gu=gitupdate

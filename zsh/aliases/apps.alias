@@ -1,0 +1,5 @@
+alias c="code .";
+alias dd="cd ~/code";
+alias d="cd ~/code && cd "
+alias vim='vim'
+alias vi='vim'

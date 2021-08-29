@@ -1,0 +1,44 @@
+alias ls='ls -la --color=auto'
+# ls, the common ones I use a lot shortened for rapid fire usage
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+alias ll='ls -l'      #long list
+alias ldot='ls -ld .*'
+alias lS='ls -1FSsh'
+alias lart='ls -1Fcart'
+alias lrt='ls -1Fcrt'
+alias ll="ls -la";
+alias ..="cd ../";
+alias ..l="cd ../ && ll";
+alias l='ls -Fhl' 
+alias ll='ls -aFhl' 
+alias dir='ls -aFhl'
+alias -- -='cd -' ...='cd ../..'
+alias -s {md,yaml,yml}='open /Applications/Visual\ Studio\ Code.app'
+
+
+
+alias rmd='rm -rf'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+alias md="mkdir "
+alias ..='cd ..'
+alias ...='cd ../..'
+alias dirs='dirs -v | head -10'
+alias usage='du -h -d1'
+
+alias runp="lsof -i "
+
+# alias zshrc='${=EDITOR} $ZDORDIR/.zshrc' # Quick access to the ~/.zshrc file
+alias zshrc='code $ZDOTDIR/.zshrc'
+alias sshdir="cd ~/.ssh"
+alias dev="cd $HOME/dev"
+
